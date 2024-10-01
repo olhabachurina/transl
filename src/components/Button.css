@@ -1,0 +1,19 @@
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #feb47b;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }

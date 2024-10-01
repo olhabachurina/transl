@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  width: 60%;
+  max-width: 800px;
+  transition: transform 0.3s ease-in-out;
+}
+
+textarea {
+  width: 80%;
+  padding: 15px;
+  font-size: 1.2em;
+  margin: 20px 0;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transform: scale(1.02);
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.4em;
+  background: linear-gradient(135deg, #007bff, #00c3ff);
   color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #008cff);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+button:active {
+  transform: scale(0.98);
+}
+
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 25px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+textarea::placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.language-selection,
+.style-selection {
+  margin: 20px 0;
+}
+
+.language-selection label,
+.style-selection label {
+  font-size: 1.2em;
+  color: #fff;
+  margin-right: 10px;
+}
+
+select {
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f1f1f1;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+select:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.history {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.history h2 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history li {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.history li:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .App {
+    width: 90%;
   }
 }
+
+  button {
+    width: 100%;
+    font-size: 1.3em;
+  }
+
+  textarea {
+    width: 100%;
+  }
